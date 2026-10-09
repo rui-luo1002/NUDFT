@@ -1,3 +1,20 @@
 [build-system]
 requires = ["setuptools", "numpy"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "NUDFT"
+version = "0.0.0"
+dependencies = ["numpy"]
+
+description = "Non-Uniform Discret/Direct Fourier Transform with parallel. Maybe useful as a groundtruth"
+keywords = ["NUDFT", "DFT", "Fourier-Transform"]
+authors = [{name = "Rui Luo", email = "Rui.1002@proton.me"}]
+
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/rui-luo1002/NUDFT"
+Examples = "https://github.com/rui-luo1002/NUDFT/tree/main/example"

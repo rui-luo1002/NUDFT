@@ -14,8 +14,8 @@ tupK_Ct = meshgrid(
     linspace(-nPix//2, nPix//2, nPix, endpoint=False),
     indexing='ij')[::-1]
 arrK_Ct = array(tupK_Ct).transpose(1,2,0)
-arrK_Sp = asarray(load("../Resource/K.npy"))
-arrAera = asarray(load("../Resource/Aera.npy"))
+arrK_Sp = asarray(load("./Resource/K.npy"))
+arrAera = asarray(load("./Resource/Aera.npy"))
 nPE, nRO, _ = arrK_Sp.shape
 
 # simulate rawdata S using dft()

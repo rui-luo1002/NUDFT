@@ -1,16 +1,26 @@
 from setuptools import setup, Extension
 import numpy
 
-mod = Extension(
-    'nudft.ext',
-    sources=['./nudft/ext/main.cpp'],
-    include_dirs=[numpy.get_include()],
-    extra_compile_args=["-fopenmp"],
-    extra_link_args=["-fopenmp"],
+src = \
+[
+    f'./nudft_src/ext/main.cpp',
+]
+
+ext = Extension\
+(
+    f"nudft.ext", 
+    sources = src,
+    include_dirs = [f"./nudft_src/ext/", numpy.get_include()],
+    language = 'c++',
+    extra_compile_args = ["-O3", "-fopenmp"],
+    extra_link_args = ["-fopenmp"],
 )
 
-setup(
-    name='nudft',
-    ext_modules=[mod],
-    packages=["nudft"],
+setup\
+(
+    name = f'nudft',
+    ext_modules = [ext],
+    packages = ["nudft"],
+    package_dir = {"nudft":"./nudft_src/"},
+    include_package_data = False
 )
