@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "NUDFT"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = ["numpy"]
 
 description = "Non-Uniform Discret/Direct Fourier Transform with parallel. Maybe useful as a groundtruth"
